@@ -90,11 +90,3 @@ func CloneCatalog(snapshot CatalogSnapshot) CatalogSnapshot {
 	}
 	return clone
 }
-
-func catalogListingsSnapshot(listings []ProductListing) []ProductListing {
-	clone := slices.Clone(listings)
-	for index := range clone {
-		clone[index].IngredientLotIDs = nil
-	}
-	return clone
-}
